@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Генератор никнеймов</title>
+
+  <style>
+    body {
+      background: #0f172a;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #38bdf8;
+      border: none;
+      border-radius: 8px;
+    }
+    button:hover {
+      background: #0ea5e9;
+    }
+    #nickname {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Генератор никнеймов</h1>
+    <p id="nickname">Нажми кнопку</p>
+    <button onclick="generateNickname()">Сгенерировать ник</button>
+  </div>
+
+  <script>
+    function generateNickname() {
+      const adjectives = [
+        "gl1mer", "Faston", "Cruz", "Silent", "cl1ent",
+        "Shadow", "Coolman", "Luckytoor", "Epiter", "Cyberfun"
+      ];
+
+      const nouns = [
+        "pinko", "Dront", "Nida", "lev1r",
+        "Hunter", "futok", "King", "Demon", "gul"
+      ];
+
+      const numbers = Math.floor(Math.random() * 999);
+
+      const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+      const noun = nouns[Math.floor(Math.random() * nouns.length)];
+
+      const nickname = adj + noun + numbers;
+      document.getElementById("nickname").textContent = nickname;
+    }
+  </script>
+</body>
+</html>
