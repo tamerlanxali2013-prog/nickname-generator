@@ -15,11 +15,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh; /* Высота экрана */
+      height: 100vh;
     }
 
     .container {
-      background-color: rgba(0, 0, 0, 0.5); /* затемнение */
+      background-color: rgba(0, 0, 0, 0.5);
       width: 80%;
       max-width: 600px;
       text-align: center;
@@ -64,10 +64,11 @@
     function generateNickname() {
       const adjectives = ["Dark", "Fast", "Crazy", "Silent", "Fire", "Shadow", "Cool", "Lucky", "Epic", "Cyber"];
       const nouns = ["Wolf", "Dragon", "Ninja", "Player", "Hunter", "Ghost", "King", "Demon", "Pro"];
-      const numbers = Math.floor(Math.random() * 999);
+
       const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
       const noun = nouns[Math.floor(Math.random() * nouns.length)];
-      const nickname = adj + noun + numbers;
+
+      const nickname = adj + noun; // только слова, без цифр
       document.getElementById("nickname").textContent = nickname;
     }
   </script>
