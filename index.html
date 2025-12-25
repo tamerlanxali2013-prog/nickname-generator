@@ -68,7 +68,9 @@
       const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
       const noun = nouns[Math.floor(Math.random() * nouns.length)];
 
-      const nickname = adj + noun; // только слова, без цифр
+      // формируем ник только из слов
+      const nickname = adj + noun;
+
       document.getElementById("nickname").textContent = nickname;
     }
   </script>
