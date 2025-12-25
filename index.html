@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Генератор никнеймов</title>
+  <title>Генератор крутых никнеймов</title>
   <style>
     body {
       margin: 0;
@@ -55,21 +55,20 @@
 </head>
 <body>
   <div class="container">
-    <h1>Генератор никнеймов</h1>
+    <h1>Генератор крутых никнеймов</h1>
     <p id="nickname">Нажми кнопку</p>
     <button onclick="generateNickname()">Сгенерировать ник</button>
   </div>
 
   <script>
     function generateNickname() {
-      const adjectives = ["Dark", "Fast", "Crazy", "Silent", "Fire", "Shadow", "Cool", "Lucky", "Epic", "Cyber"];
-      const nouns = ["Wolf", "Dragon", "Ninja", "Player", "Hunter", "Ghost", "King", "Demon", "Pro"];
+      const creativeNicknames = [
+        "Zyxar","Qorvax","Luminex","Nexor","Vyrion",
+        "Klyptor","Dravok","Aetherix","Zyphor","Krynos",
+        "Valtor","Nythera","Xylander","Orvath","Pyronis"
+      ];
 
-      const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
-      const noun = nouns[Math.floor(Math.random() * nouns.length)];
-
-      // формируем ник только из слов
-      const nickname = adj + noun;
+      const nickname = creativeNicknames[Math.floor(Math.random() * creativeNicknames.length)];
 
       document.getElementById("nickname").textContent = nickname;
     }
