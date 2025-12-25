@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Генератор никнеймов</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: url('https://images.template.net/376680/Neon-Gaming-Background-edit-online-1.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    #nickname {
+      font-size: 32px;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      background: #38bdf8;
+      border: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Генератор никнеймов</h1>
+    <p id="nickname">Нажми кнопку</p>
+    <button onclick="generateNickname()">Сгенерировать ник</button>
+  </div>
+
+  <script>
+    function generateNickname() {
+      const adjectives = ["Dark", "Fast", "Crazy", "Silent", "Fire", "Shadow", "Cool", "Lucky", "Epic", "Cyber"];
+      const nouns = ["Wolf", "Dragon", "Ninja", "Player", "Hunter", "Ghost", "King", "Demon", "Pro"];
+      const numbers = Math.floor(Math.random() * 999);
+      const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+      const noun = nouns[Math.floor(Math.random() * nouns.length)];
+      const nickname = adj + noun + numbers;
+      document.getElementById("nickname").textContent = nickname;
+    }
+  </script>
+</body>
+</html>
